@@ -1,5 +1,3 @@
-# React + Vite
-
 # Roofing Company CRM
 
 A React-based CRM built for a roofing company that handles storm-damaged roofs and insurance claims. This app helps track leads from first contact through claim progress, job completion, and follow-up.
