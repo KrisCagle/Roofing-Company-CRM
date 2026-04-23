@@ -1,0 +1,105 @@
+{
+  "leads": [
+    {
+      "id": "1",
+      "fullName": "John Carter",
+      "address": "1428 Maple Drive, Nashville, TN",
+      "phone": "615-555-0142",
+      "email": "john.carter@email.com",
+      "stage": "New Lead",
+      "insuranceCompany": "State Farm",
+      "stormDate": "2026-04-10",
+      "assignedRep": "Kris"
+    },
+    {
+      "id": "2",
+      "fullName": "Melissa Grant",
+      "address": "88 Cedar Lane, Murfreesboro, TN",
+      "phone": "615-555-0198",
+      "email": "melissa.grant@email.com",
+      "stage": "Inspection Scheduled",
+      "insuranceCompany": "Allstate",
+      "stormDate": "2026-04-08",
+      "assignedRep": "Jordan"
+    },
+    {
+      "id": "3",
+      "fullName": "Terrence Hall",
+      "address": "501 Willow Street, Franklin, TN",
+      "phone": "615-555-0117",
+      "email": "terrence.hall@email.com",
+      "stage": "Claim Filed",
+      "insuranceCompany": "Farmers",
+      "stormDate": "2026-04-06",
+      "assignedRep": "Kris"
+    },
+    {
+      "id": "4",
+      "fullName": "Angela Brooks",
+      "address": "2309 Oak Ridge Court, Hendersonville, TN",
+      "phone": "615-555-0176",
+      "email": "angela.brooks@email.com",
+      "stage": "Approved",
+      "insuranceCompany": "USAA",
+      "stormDate": "2026-04-05",
+      "assignedRep": "Taylor"
+    },
+    {
+      "id": "5",
+      "fullName": "David Ramirez",
+      "address": "17 Creekside Way, Lebanon, TN",
+      "phone": "615-555-0134",
+      "email": "david.ramirez@email.com",
+      "stage": "Waiting for Check",
+      "insuranceCompany": "Liberty Mutual",
+      "stormDate": "2026-04-03",
+      "assignedRep": "Jordan"
+    },
+    {
+      "id": "6",
+      "fullName": "Sarah Whitaker",
+      "address": "904 Pine Bluff Road, Gallatin, TN",
+      "phone": "615-555-0159",
+      "email": "sarah.whitaker@email.com",
+      "stage": "Completed",
+      "insuranceCompany": "Travelers",
+      "stormDate": "2026-03-29",
+      "assignedRep": "Kris"
+    },
+    {
+      "fullName": "Wayne Kayan",
+      "address": "199 Castle Street",
+      "phone": "615-324-2454",
+      "email": "Wayne1@gmail.com",
+      "stage": "Ready for Production",
+      "insuranceCompany": "USAA",
+      "stormDate": "2026-05-24",
+      "assignedRep": "George",
+      "id": "dgiu_Ji9UmA"
+    },
+    {
+      "fullName": "Paul Weate",
+      "address": "123 Ace Street",
+      "phone": "423-252-1494",
+      "email": "PAWall@yahoo.com",
+      "stage": "New Lead",
+      "insuranceCompany": "State Farm",
+      "stormDate": "2026-04-06",
+      "assignedRep": "Q",
+      "id": "VNzhrIVheVI"
+    },
+    {
+      "fullName": "John Bilbo",
+      "address": "121 Oak Circle",
+      "phone": "865-435-3534",
+      "email": "JayB@yahoo.com",
+      "stage": "Claim Filed",
+      "insuranceCompany": "AllState",
+      "stormDate": "2026-04-09",
+      "assignedRep": "Kris",
+      "createdAt": "2026-04-23T20:54:45.356Z",
+      "id": "ee-5n8hp_YA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
