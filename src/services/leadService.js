@@ -2,14 +2,7 @@ const API_URL = "http://localhost:8088/leads"
 
 export const getLeads = async () => {
   const response = await fetch(API_URL)
-  const leads = await response.json()
-  return leads
-}
-
-export const getLeadById = async (leadId) => {
-  const response = await fetch(`${API_URL}/${leadId}`)
-  const lead = await response.json()
-  return lead
+  return await response.json()
 }
 
 export const createLead = async (newLead) => {
@@ -21,6 +14,17 @@ export const createLead = async (newLead) => {
     body: JSON.stringify(newLead),
   })
 
-  const createdLead = await response.json()
-  return createdLead
+  return await response.json()
+}
+
+export const updateLead = async (leadId, updatedFields) => {
+  const response = await fetch(`${API_URL}/${leadId}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedFields),
+  })
+
+  return await response.json()
 }
