@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react"
-import { Routes, Route } from "react-router"
+import { Routes, Route, Navigate } from "react-router-dom"
 import { NavBar } from "./components/Navbar"
 import { getLeads, createLead, updateLead } from "./services/leadService"
+import Home from "./pages/Home"
+import Login from "./pages/Login"
 import Dashboard from "./pages/Dashboard"
 import Leads from "./pages/Leads"
 import NewLead from "./pages/NewLead"
@@ -9,6 +11,10 @@ import LeadDetails from "./pages/LeadDetails"
 
 function App() {
   const [leads, setLeads] = useState([])
+  const [currentUser, setCurrentUser] = useState(() => {
+    const savedUser = localStorage.getItem("stormroof_user")
+    return savedUser ? JSON.parse(savedUser) : null
+  })
 
   useEffect(() => {
     getLeads().then((leadsArray) => {
@@ -25,6 +31,16 @@ function App() {
       setLeads(sortedLeads)
     })
   }, [])
+
+  const handleLogin = (user) => {
+    setCurrentUser(user)
+    localStorage.setItem("stormroof_user", JSON.stringify(user))
+  }
+
+  const handleLogout = () => {
+    setCurrentUser(null)
+    localStorage.removeItem("stormroof_user")
+  }
 
   const addLead = async (newLeadData) => {
     const leadToCreate = {
@@ -94,26 +110,30 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-100">
-      <NavBar />
+      <NavBar currentUser={currentUser} onLogout={handleLogout} />
 
       <main className="mx-auto max-w-6xl px-6 py-8">
         <Routes>
-          <Route path="/" element={<Dashboard leads={leads} />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          <Route path="/dashboard" element={<Dashboard leads={leads} />} />
           <Route path="/leads" element={<Leads leads={leads} />} />
           <Route path="/leads/new" element={<NewLead addLead={addLead} />} />
           <Route
             path="/leads/:leadId"
             element={
               <LeadDetails
-  leads={leads}
-  onUpdateLeadStage={updateLeadStage}
-  onUpdateLeadMilestones={updateLeadMilestones}
-  onUpdateLeadNotes={updateLeadNotes}
-  onUpdateLeadDetails={updateLeadDetails}
-  onUpdateLeadDocuments={updateLeadDocuments}
-/>
+                leads={leads}
+                onUpdateLeadStage={updateLeadStage}
+                onUpdateLeadMilestones={updateLeadMilestones}
+                onUpdateLeadNotes={updateLeadNotes}
+                onUpdateLeadDetails={updateLeadDetails}
+                onUpdateLeadDocuments={updateLeadDocuments}
+              />
             }
           />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
     </div>

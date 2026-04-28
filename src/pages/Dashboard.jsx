@@ -96,9 +96,6 @@ const Dashboard = ({ leads }) => {
     return sum + parseMoney(lead.financials?.finalInvoice)
   }, 0)
 
-  const totalJobCost = leads.reduce((sum, lead) => {
-    return sum + parseMoney(lead.financials?.jobCost)
-  }, 0)
 
   const totalGrossProfit = leads.reduce((sum, lead) => {
     const storedGrossProfit = parseMoney(lead.financials?.grossProfit)
