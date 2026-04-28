@@ -6,7 +6,7 @@
       "address": "1428 Maple Drive, Nashville, TN",
       "phone": "615-555-0142",
       "email": "john.carter@email.com",
-      "stage": "New Lead",
+      "stage": "Waiting for Check",
       "insuranceCompany": "State Farm",
       "stormDate": "2026-04-10",
       "assignedRep": "Kris",
@@ -205,7 +205,7 @@
       "address": "121 Oak Circle",
       "phone": "865-435-3534",
       "email": "JayB@yahoo.com",
-      "stage": "Waiting for Check",
+      "stage": "Contact Attempted",
       "insuranceCompany": "AllState",
       "stormDate": "2026-04-09",
       "assignedRep": "Kris",
@@ -236,6 +236,70 @@
         }
       ],
       "documents": []
+    },
+    {
+      "fullName": "Darla Smith",
+      "address": "125 Big Road",
+      "phone": "865-389-4321",
+      "email": "Dsmith@yahoo.com",
+      "stage": "New Lead",
+      "insuranceCompany": "Liberty",
+      "stormDate": "2026-04-30",
+      "assignedRep": "Winston",
+      "notes": [
+        {
+          "id": "a0c24748-3c58-4428-adbc-b49a59d49bc2",
+          "text": "Knocked and scheduled meeting.",
+          "createdAt": "2026-04-25T16:24:36.406Z"
+        }
+      ],
+      "documents": [],
+      "milestones": {
+        "doorKnocked": false,
+        "inspectionCompleted": false,
+        "claimFiled": false,
+        "adjusterMeetingDone": false,
+        "approved": false,
+        "firstCheckReceived": false,
+        "contractSigned": false,
+        "productionScheduled": false,
+        "jobCompleted": false,
+        "finalPaymentReceived": false
+      },
+      "createdAt": "2026-04-25T15:56:01.650Z",
+      "id": "_m1GzKKBVbc"
+    },
+    {
+      "fullName": "Dave Smith",
+      "address": "123 John Pond Rd",
+      "phone": "615-312-4567",
+      "email": "Dave@gmail.com",
+      "stage": "Inspection Scheduled",
+      "insuranceCompany": "State Farm",
+      "stormDate": "2026-03-29",
+      "assignedRep": "Q",
+      "notes": [
+        {
+          "id": "36f94073-f95d-41be-92de-ca347a5fc453",
+          "text": "Storm on 3/29 scheduling an inspection when he gets home from work on 4/12",
+          "createdAt": "2026-04-28T14:00:25.255Z"
+        }
+      ],
+      "documents": [],
+      "milestones": {
+        "doorKnocked": true,
+        "inspectionCompleted": false,
+        "claimFiled": false,
+        "adjusterMeetingDone": true,
+        "approved": false,
+        "firstCheckReceived": false,
+        "contractSigned": false,
+        "productionScheduled": false,
+        "jobCompleted": false,
+        "finalPaymentReceived": false
+      },
+      "createdAt": "2026-04-25T16:25:55.978Z",
+      "id": "qqqUgjB23cw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
